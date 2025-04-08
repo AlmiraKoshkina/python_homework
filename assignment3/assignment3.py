@@ -89,9 +89,9 @@ print(last_two)
 
     # 3. Get the shape of a DataFrame
 
-shape_employee = more_employees.shape
+employee_shape = more_employees.shape
 
-print(shape_employee)
+print(employee_shape)
 
     # 4. Use the info() method:
 
@@ -103,7 +103,7 @@ print(info_employees)
 
     # 1Create a DataFrame from dirty_data.csv file and assign it to the variable dirty_data.
 
-with open('./dirty_data.csv', 'r') as file:
+with open('assignment3/dirty_data.csv', 'r') as file:
     dirty_data = pd.read_csv(file)
 
 print(dirty_data)
@@ -146,9 +146,9 @@ print(clean_data["Hire Date"])
 
 clean_data = clean_data.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
 
-clean_data['Name'] = clean_data['Name'].str.upper()
+clean_data['Name'] = clean_data['Name'].str.capitalize()
 
-clean_data['Department'] = clean_data['Department'].str.upper()
+clean_data['Department'] = clean_data['Department'].str.capitalize()
 
 
 print(clean_data)
