@@ -6,7 +6,7 @@ import os
     # 1.Create a DataFrame from a dictionary:
 
 data = {
-    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Name': ['Alice', 'Bob', 'charlie'],
     'Age': [25, 30, 35],
     'City': ['New York', 'Los Angeles', 'Chicago']
 }
@@ -97,7 +97,8 @@ print(employee_shape)
 
 info_employees = more_employees.info()
 
-print(info_employees)
+more_employees.info()
+
 
 #Task 4: Data Cleaning 
 
@@ -124,7 +125,19 @@ print(clean_data['Age'])
 
     # 4. Convert Salary to numeric and replace known placeholders (unknown, n/a) with NaN
 
-clean_data['Salary'] = pd.to_numeric(clean_data['Salary'], errors='coerce').replace(['unknown', 'n/a'], pd.NA)
+# Replace placeholders with NaN
+clean_data['Salary'] = clean_data['Salary'].replace(['unknown', 'n/a'], pd.NA)
+
+# Convert to numeric
+clean_data['Salary'] = pd.to_numeric(clean_data['Salary'], errors='coerce')
+
+print(clean_data['Salary'].isnull())  
+print(clean_data['Salary'])          
+
+# Fill missing with median
+clean_data['Salary'] = clean_data['Salary'].fillna(clean_data['Salary'].median())
+
+
 
 print (clean_data['Salary'])
 
@@ -133,7 +146,9 @@ print (clean_data['Salary'])
 clean_data['Age'] = clean_data['Age'].fillna(clean_data['Age'].mean())
 print(clean_data['Age'])
 
-clean_data['Salary'] = clean_data['Salary'].fillna(clean_data['Salary'].median())
+clean_data['Salary'] = clean_data['Salary'].replace(['unknown', 'n/a'], pd.NA)
+clean_data['Salary'] = pd.to_numeric(clean_data['Salary'], errors='coerce')
+
 print(clean_data['Salary'])
 
 
@@ -145,10 +160,9 @@ print(clean_data["Hire Date"])
     # 7. Strip extra whitespace and standardize Name and Department as uppercase
 
 clean_data = clean_data.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
-
 clean_data['Name'] = clean_data['Name'].str.capitalize()
+clean_data['Department'] = clean_data['Department'].str.upper()  
 
-clean_data['Department'] = clean_data['Department'].str.capitalize()
 
 
 print(clean_data)
