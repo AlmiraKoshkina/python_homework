@@ -1,0 +1,28 @@
+1. Which sections of the Wikipedia site are restricted for crawling?
+
+The following sections are disallowed for all user agents:
+- /w/
+- /api/
+- /trap/
+- /wiki/Special:
+- /wiki/Wikipedia:Articles_for_deletion/
+- /wiki/Wikipedia:Votes_for_deletion/
+- /wiki/Wikipedia:Copyright_problems
+... and many more related to internal Wikipedia discussions, deletions, user management, and admin tools.
+
+2. Are there specific rules for certain user agents?
+
+Yes, there are specific blocks for many user agents such as:
+- MJ12bot
+- Mediapartners-Google*
+- wget
+- HTTrack
+- WebReaper
+- and others considered abusive or overly aggressive.
+Some bots like IsraBot or Orthogaffe are explicitly allowed.
+
+3. Why do websites use robots.txt?
+
+Websites use robots.txt to control how search engines and crawlers access their pages. 
+It helps prevent server overload and protects sensitive or dynamically generated pages from being scraped or indexed. 
+Following robots.txt is a key part of ethical web scraping — it shows respect for the website’s boundaries and intent.

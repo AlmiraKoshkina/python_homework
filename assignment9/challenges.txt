@@ -1,0 +1,4 @@
+The main challenge was that the OWASP page is rendered with JavaScript and the titles are nested inside <strong> tags within <a> elements inside <li> elements. 
+Standard XPath queries failed until the correct structure was targeted using: //li[a/strong[starts-with(text(), 'A0')]]. 
+This allowed accurate extraction of the Top 10 items. A 5-second delay was needed to let the page load.
+
