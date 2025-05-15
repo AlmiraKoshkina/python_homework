@@ -1,4 +1,3 @@
-
 import csv
 import traceback
 import os
@@ -11,7 +10,7 @@ def read_employees():
     rows = []
 
     try:
-        with open("./csv/employees.csv") as file:
+        with open("../csv/employees.csv") as file:
             reader = csv.reader(file)
 
             for i, row in enumerate(reader):
@@ -138,8 +137,8 @@ def read_minutes():
         result["rows"] = rows
         return result
 
-    minutes1 = load_minutes("./csv/minutes1.csv")
-    minutes2 = load_minutes("./csv/minutes2.csv")
+    minutes1 = load_minutes("../csv/minutes1.csv")
+    minutes2 = load_minutes("../csv/minutes2.csv")
 
     return minutes1, minutes2
 minutes1, minutes2 = read_minutes()
@@ -185,7 +184,7 @@ def write_sorted_list():
     ))
 
     
-    with open("./minutes.csv", "w", newline="") as file:
+    with open("../minutes.csv", "w", newline="") as file:
         writer = csv.writer(file)
 
         

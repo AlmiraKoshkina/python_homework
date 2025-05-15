@@ -6,7 +6,7 @@ import os
     # 1.Create a DataFrame from a dictionary:
 
 data = {
-    'Name': ['Alice', 'Bob', 'charlie'],
+    'Name': ['Alice', 'Bob', 'Charlie'],
     'Age': [25, 30, 35],
     'City': ['New York', 'Los Angeles', 'Chicago']
 }
@@ -89,16 +89,15 @@ print(last_two)
 
     # 3. Get the shape of a DataFrame
 
-employee_shape = more_employees.shape
+shape_employee = more_employees.shape
 
-print(employee_shape)
+print(shape_employee)
 
     # 4. Use the info() method:
 
 info_employees = more_employees.info()
 
-more_employees.info()
-
+print(info_employees)
 
 #Task 4: Data Cleaning 
 
@@ -125,19 +124,7 @@ print(clean_data['Age'])
 
     # 4. Convert Salary to numeric and replace known placeholders (unknown, n/a) with NaN
 
-# Replace placeholders with NaN
-clean_data['Salary'] = clean_data['Salary'].replace(['unknown', 'n/a'], pd.NA)
-
-# Convert to numeric
-clean_data['Salary'] = pd.to_numeric(clean_data['Salary'], errors='coerce')
-
-print(clean_data['Salary'].isnull())  
-print(clean_data['Salary'])          
-
-# Fill missing with median
-clean_data['Salary'] = clean_data['Salary'].fillna(clean_data['Salary'].median())
-
-
+clean_data['Salary'] = pd.to_numeric(clean_data['Salary'], errors='coerce').replace(['unknown', 'n/a'], pd.NA)
 
 print (clean_data['Salary'])
 
@@ -146,9 +133,7 @@ print (clean_data['Salary'])
 clean_data['Age'] = clean_data['Age'].fillna(clean_data['Age'].mean())
 print(clean_data['Age'])
 
-clean_data['Salary'] = clean_data['Salary'].replace(['unknown', 'n/a'], pd.NA)
-clean_data['Salary'] = pd.to_numeric(clean_data['Salary'], errors='coerce')
-
+clean_data['Salary'] = clean_data['Salary'].fillna(clean_data['Salary'].median())
 print(clean_data['Salary'])
 
 
@@ -160,9 +145,11 @@ print(clean_data["Hire Date"])
     # 7. Strip extra whitespace and standardize Name and Department as uppercase
 
 clean_data = clean_data.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
-clean_data['Name'] = clean_data['Name'].str.capitalize()
-clean_data['Department'] = clean_data['Department'].str.upper()  
 
+clean_data['Name'] = clean_data['Name'].str.upper()
+
+clean_data['Department'] = clean_data['Department'].str.upper()
 
 
 print(clean_data)
+
