@@ -1,0 +1,60 @@
+product_id,line_item_id,total,product_name
+59,14,1524.38,Ball
+23,12,18.216,Bike
+55,19,899.9320000000002,Chair
+8,12,205.568,Concrete Cheese
+28,12,697.191,Concrete Gloves
+34,19,2136.816,Concrete Pants
+40,21,1413.555,Cotton Ball
+6,26,2385.2400000000002,Cotton Bike
+10,30,3590.0700000000006,Cotton Sausages
+53,21,1410.816,Ergonomic Cheese
+4,21,2264.581,Ergonomic Wooden Soap
+50,18,2563.407,Fantastic Fish
+17,19,1603.8,Fantastic Sausages
+1,21,556.875,Fantastic Shoes
+29,21,2434.454,For repair Fresh Fish
+2,28,1958.1870000000001,For repair Soft Table
+37,21,611.5559999999999,Frozen Computer
+16,12,1332.7050000000002,Gorgeous Salad
+14,19,792.715,Handcrafted Hat
+45,22,2165.9,Handcrafted Wooden Fish
+19,17,1469.116,Hat
+25,20,416.064,Incredible Hat
+58,17,1649.5050000000003,Intelligent Chips
+20,22,1080.75,Licensed Cheese
+54,21,2598.4200000000005,Licensed Plastic Bike
+42,14,1540.0880000000004,Mouse
+12,19,1483.02,Mouse
+57,20,1437.0070000000003,New Fresh Chips
+51,18,1816.7930000000001,Pants
+24,20,1419.9900000000002,Plastic Pants
+35,15,1796.9050000000002,Practical Fish
+41,14,647.0090000000001,Practical Steel Towels
+44,18,246.40000000000003,Practical Tuna
+56,16,1150.38,Refined Ball
+30,14,532.224,Refined Cotton Sausages
+48,16,1649.285,Rubber Mouse
+52,19,1157.816,Rubber Towels
+43,15,84.53500000000001,Salad
+3,19,1085.084,Sausages
+46,15,617.0120000000001,Sausages
+18,13,27.830000000000005,Shirt
+11,23,2086.2380000000003,Shoes
+36,21,965.888,Sleek Concrete Cheese
+7,18,2274.657,Sleek Granite Car
+15,30,481.99800000000005,Small Fish
+22,17,1176.0870000000002,Small Shirt
+13,19,388.24500000000006,Soft Pizza
+21,18,1979.208,Steel Car
+33,10,808.0380000000001,Steel Computer
+31,23,290.53200000000004,Steel Mouse
+49,17,1483.02,Steel Sausages
+27,17,499.2900000000001,Table
+32,19,935.825,Tasty Pizza
+47,13,1689.3360000000002,Tuna
+26,24,1577.0700000000002,Unbranded Chicken
+39,13,1091.3760000000002,Unbranded Wooden Hat
+9,22,232.81500000000003,Unbranded Wooden Keyboard
+38,18,1047.816,Wooden Mouse
+5,20,1944.0300000000004,Wooden Shoes
